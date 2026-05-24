@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="app-title">My Tasks</h1>
+            <p class="app-subtitle">Stay organized, stay productive</p>
+        </header>
+
+        <!-- Input -->
+        <div class="input-section">
+            <div class="input-wrapper">
+                <span class="input-icon">+</span>
+                <input 
+                    type="text" 
+                    id="task-input"
+                    class="task-input"
+                    placeholder="Add a new task and press Enter..."
+                    maxlength="100"
+                    autocomplete="off"
+                />
+                <button id="add-btn" class="add-btn">Add</button>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <span id="task-count" class="task-count">0 tasks</span>
+            <button id="clear-completed" class="clear-btn">
+                Clear Completed
+            </button>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+            <button class="filter-btn" data-filter="active">
+                Active
+            </button>
+            <button class="filter-btn" data-filter="completed">
+                Completed
+            </button>
+        </div>
+
+        <!-- Task List -->
+        <ul id="task-list" class="task-list">
+            <!-- Tasks injected here by JS -->
+        </ul>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state hidden">
+            <div class="empty-icon">📝</div>
+            <p class="empty-title">No tasks here!</p>
+            <p class="empty-sub">Add a task above to get started</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with HTML, CSS, JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
